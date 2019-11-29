@@ -1,5 +1,6 @@
 //
 // Created by Tobias on 22.11.2019.
+//Lösung sehr langsam und ineffizient, mir ist aber keine andere möglichkeit eingefallen
 //
 #include <stdbool.h>
 #include <stdio.h>
