@@ -21,6 +21,10 @@ bool reportReport(){
     int get=0;
     int nothing=0;
     int smartphone=0;
+    int mozilla=0;
+    int chrome=0;
+    int safari=0;
+    int apache=0;
     char* line=NULL;
     size_t len;
     ssize_t read;
@@ -40,9 +44,21 @@ bool reportReport(){
         } else if(strstr(line,"iPhone")!=NULL){
             smartphone++;
         }
+
+        if(strstr(line, "Mozilla") != NULL){
+            mozilla++;
+        } if(strstr(line, "Chrome") != NULL){
+            chrome++;
+        }if(strstr(line, "Safari") != NULL){
+            safari++;
+        }if(strstr(line, "Apache") != NULL){
+            apache++;
+        }
     }
+
     printf("Posts: %d / Gets: %d / Nothing: %d\n",post,get,nothing);
-    printf("Zeilen: %d\n%d",zeilen,smartphone);
+    printf("Zeilen: %d\nSmartphones: %d",zeilen,smartphone);
+    printf("\nMozilla: %d\nChrome: %d\nSafari: %d\nApache: %d",mozilla,chrome,safari,apache);
 
 return true;
 }
