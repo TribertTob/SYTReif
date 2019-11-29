@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include "report.h"
 
-
 int main() {
 
 
-
-    if(reportOpenFile("C:\\Users\\tobia\\CLionProjects\\GetStarted\\access.log.6")) {
+    if(reportOpenFile("..\\access.log.6")) {
         if (reportReport()) {
             if (reportCloseFile()) {}
             else {
