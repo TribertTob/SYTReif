@@ -1,12 +1,19 @@
-#include <stdio.h>
-#include <stdbool.h>
 #include "blink.h"
+#include <string.h>
 
-int main (){
+int main (int argc, char *argv[]){
 
-while(true){
-printf("Hallo");
+if(strcmp(argv[1],"rot")==true){
+	ledBlinkRed();
+}else if(strcmp(argv[1],"gruen")==true){
+//	ledBlinkGreen();
+}else if(strcmp(argv[1],"all")){
+//	ledBlinkall();
+}else{
+//	ledBlinkRandom();
 }
+
+
 
 return 0;
 }
