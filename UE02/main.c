@@ -3,17 +3,16 @@
 
 int main (int argc, char *argv[]){
 
-if(strcmp(argv[1],"rot")==true){
+
+if(strcmp(argv[1],"rot")!=true){
+	printf("Hallo");
 	ledBlinkRed();
-}else if(strcmp(argv[1],"gruen")==true){
-//	ledBlinkGreen();
-}else if(strcmp(argv[1],"all")){
-//	ledBlinkall();
 }else{
+printf("Else");
 //	ledBlinkRandom();
 }
 
-
+printf("fsgsf");
 
 return 0;
 }

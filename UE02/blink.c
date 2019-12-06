@@ -1,4 +1,6 @@
 #include "blink.h"
+#include <stdio.h>
+#include <wiringPi.h>
 
 int ledBlinkall(){
 return 0;
@@ -9,12 +11,13 @@ return 0;
 }
 
 void ledBlinkRed(){
+wiringPiSetup();
 pinMode(RED,OUTPUT);
 	while(true){
 		digitalWrite(RED,HIGH);
-		delay(5);
+		delay(500);
 		digitalWrite(RED,LOW);
-		delay(5);
+		delay(500);
 	}
 }
 
