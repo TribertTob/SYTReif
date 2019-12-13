@@ -4,18 +4,19 @@
 
 int main (int argc, char *argv[]){
 
-printf("%d",GPIOExport(POUT));		//POUT = Red
-printf("%d",GPIODirection(POUT,OUT));
-printf("%d",GPIOWrite(POUT,HIGH));
-
-//printf("%d",GPIOWrite(POUT,LOW));
-
-if(!strcmp(argv[1],"rot")){
-	printf("Rot");
+if(!strcmp(argv[1],"red")){
 	ledBlinkRed();
 }
 if(!strcmp(argv[1],"green")){
 	ledBlinkGreen();
+}
+
+if(!strcmp(argv[1],"all")){
+	ledBlinkall();
+}
+
+if(!strcmp(argv[1],"rand")){
+	ledBlinkRandom();
 }
 
 return 0;

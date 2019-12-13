@@ -1,9 +1,20 @@
 #include "blink.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <wiringPi.h>
 
 void ledBlinkall(){
-
+wiringPiSetup();
+pinMode(RED,OUTPUT);
+pinMode(GREEN,OUTPUT);
+	while(true){
+		digitalWrite(RED,HIGH);
+		digitalWrite(GREEN,HIGH);
+		delay(50);
+		digitalWrite(RED,LOW);
+		digitalWrite(GREEN,LOW);
+		delay(50);
+}
 }
 
 void ledBlinkGreen(){
@@ -11,9 +22,9 @@ GPIOExport(POUT);
 GPIODirection(POUT,OUT);
 	while(true){
 		GPIOWrite(POUT,HIGH);
-		delay(500);
+		delay(200);
 		GPIOWrite(POUT,LOW);
-		delay(500);
+		delay(200);
 }
 }
 
@@ -22,14 +33,29 @@ wiringPiSetup();
 pinMode(RED,OUTPUT);
 	while(true){
 		digitalWrite(RED,HIGH);
-		delay(500);
+		delay(200);
 		digitalWrite(RED,LOW);
-		delay(500);
+		delay(200);
 	}
 }
 
 void ledBlinkRandom(){
-return 0;
+wiringPiSetup();
+int rand1,rand2;
+while(true){
+	rand1=rand()%2;
+	rand2=(rand()%22)+3;
+	if(rand1){
+		digitalWrite(RED,HIGH);
+	}else{
+		digitalWrite(GREEN,HIGH);
+	}
+	delay(rand2);
+
+digitalWrite(RED,LOW);
+digitalWrite(GREEN,LOW);
+delay(rand2);
+}
 }
 
 
